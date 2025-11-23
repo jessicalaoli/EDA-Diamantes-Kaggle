@@ -26,19 +26,31 @@ Este projeto demonstra habilidades em Análise Exploratória de Dados (EDA) e vi
 
 * **Carat (Peso):** O Histograma revelou uma **assimetria positiva severa** (a maioria dos diamantes é leve), com picos claros nos "pesos mágicos" ($1.0$ e $1.5$ Carat).
 
+    ![Distribuição do Peso do Diamante (Carat)](grafico_carat_distribuicao.png)
+
 * **Price (Preço) Transformado:** Para modelagem, o preço foi transformado (Log). O gráfico revela uma distribuição **bimodal** (dois picos), indicando duas populações distintas de diamantes no mercado.
+
+    ![Distribuição do Preço (Transformação Logarítmica)](grafico_price_log_distribuicao.png)
 
 ### 2. A Força da Correlação e Variância
 
 * **Correlação Carat vs. Preço:** O gráfico mostra uma **correlação positiva extremamente forte e não linear**. A nuvem se alarga para a direita, indicando que a **variância do preço aumenta drasticamente** para diamantes mais pesados (acima de $1.0$ Carat).
 
+    ![Correlação entre Preço e Peso (Carat)](grafico_clarity.png)
+
 * **Mapa de Calor da Correlação:** Confirma a correlação de **$\mathbf{0.92}$** entre `carat` e `price`. Além disso, mostra que `depth` e `table` (métricas de corte) têm correlações insignificantes com o preço, em comparação com o `carat`.
+
+    ![Mapa de Calor da Correlação entre Variáveis Numéricas](grafico_carat_price_scatter.png)
 
 ### 3. Análise das Variáveis de Qualidade
 
 * **Composição do Corte:** O *dataset* é dominado por cortes de **alta qualidade** (`Ideal` e `Premium`).
 
+    ![Contagem de Diamantes por Qualidade de Corte](grafico_carat_price_corre.png)
+
 * **Clareza vs. Preço:** O Box Plot demonstra um efeito **contraintuitivo**: a mediana do preço em categorias de clareza inferior (`SI2`) é por vezes mais alta que a de clareza superior (`IF`). Isso ocorre porque o **`carat` (peso) mascara o efeito**, sendo o fator dominante na precificação.
+
+    ![Distribuição de Preços por Clareza](grafico_heatmap_correlacao.png)
 
 ---
 
